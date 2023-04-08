@@ -39,7 +39,7 @@ const Sidebar = () => {
             {items.map((item) => (
               <SidebarItem
                 key={item.href}
-                // alert={item.alert}
+                alert={item.alert}
                 auth={item.auth}
                 href={item.href} 
                 icon={item.icon} 
