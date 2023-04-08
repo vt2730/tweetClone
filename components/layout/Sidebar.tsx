@@ -5,12 +5,7 @@ import { FaUser } from 'react-icons/fa';
 import SidebarItem from './SidebarItem';
 import SidebarLogo from './SidebarLogo';
 import SidebarTweetButton from './SidebarTweetButton';
-
 import useCurrentUser from '@/hooks/useCurrentUser';
-
-// import SidebarItem from './SidebarItem';
-// import SidebarLogo from './SidebarLogo';
-// import SidebarTweetButton from './SidebarTweetButton';
 
 const Sidebar = () => {
   const { data: currentUser } = useCurrentUser();
@@ -26,12 +21,12 @@ const Sidebar = () => {
       label: 'Notifications',
       href: '/notifications',
       auth: true,
-    //   alert: currentUser?.hasNotification
+      alert: currentUser?.hasNotification
     },
     {
       icon: FaUser,
       label: 'Profile',
-    //   href: `/users/${currentUser?.id}`,
+      href: `/users/${currentUser?.id}`,
       auth: true,
     },
   ]
